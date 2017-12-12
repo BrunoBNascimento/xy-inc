@@ -59,7 +59,10 @@ for (let i in domains) {
                 ActualSchema.findById(req.params.id, (err, resource) => {
                     if(err)
                         res.status(400).send(err)
-                    res.send(resource);
+                    if(!!resource)
+                        res.send(resource);
+
+                    res.status(404).send({"message":"Not found"})
                 })
 
             })

@@ -1,8 +1,12 @@
 import express from 'express';
-import routes from './src/routes/routesFactory';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
+import validate from 'express-validation';
+
+import crudValidation from './src/validation/crud';
+import routes from './src/routes/routesFactory';
 import {DomainsService} from './src/services/domainsService';
+
 
 let domainInstance = new DomainsService();
 
@@ -20,6 +24,7 @@ const app = express();
 //app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({type: 'application/json'}));
 
+
 // Run and call my array of routes
 for (let i in routes) {
     routes[i](app);
@@ -28,13 +33,10 @@ for (let i in routes) {
 const PORT = 8080;
 
 app.get('/', (req, res) => {
-
+    res.status(200).send(domainInstance.getDomains());
 })
 
-app.post('/',(req, res, next) => {
-    console.log('middleware test');
-    next();
-}, (req, res, next) => {
+app.post('/', validate(crudValidation), (req, res, next) => {
     domainInstance.setDomains(req.body)
     res.status(201).send(req.body);
 })

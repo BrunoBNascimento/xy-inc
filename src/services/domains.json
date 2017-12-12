@@ -1,1 +1,1 @@
-[{"domain":"customer","properties":{"firstName":{"type":"String","required":"Entre com o primeiro nome"},"lastName":{"type":"String","required":"Entre com o ultimo nome"}}},{"domain":"treto","properties":{"firstName":{"type":"String","required":"Entre com o primeiro nome"},"password":{"type":"String","required":"Entre com a senha"}}}]
+[{"domain":"customer","properties":{"firstName":{"type":"String","required":"Entre com o primeiro nome"},"lastName":{"type":"String","required":"Entre com o ultimo nome"}}}]

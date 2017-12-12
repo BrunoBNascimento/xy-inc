@@ -40,6 +40,8 @@ First of all: **Dependencies**
 
 SEND ``POST`` request to ``http://localhost:8080`` with request body in json like this:
 
+#### YOU WILL NEED REMOVE COMMENTS FROM JSON
+
 ```json
 {
     "domain":"customer", //REQUIRED

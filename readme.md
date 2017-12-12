@@ -27,3 +27,54 @@ First of all: **Dependencies**
 **How to run this application in docker?**
 
 ``next version``
+
+**How use this application?**
+
+You will need this apps:
+
+ * Postman or other
+ * dependencies installed
+ 
+**Create a crud from a domain**
+
+``Content-Type: application/json``
+
+SEND ``POST`` request to ``http://localhost:8080`` with request body in json like this:
+
+```json
+{
+    "domain":"customer", //REQUIRED
+    "firstName": {
+        "type": "String", //REQUIRED,
+        "required": "Entre com o primeiro nome" //OPTIONAL
+    },
+    "lastName": {
+        "type": "String", //REQUIRED,
+        "required": "Entre com o ultimo nome" //OPTIONAL
+    },
+    "email": {
+        "type": "String"
+    },
+    "company": {
+        "type": "String"
+    },
+    "phone": {
+        "type": "String"
+    }
+}
+```
+This example will create this endpoints
+
+``GET`` /customer - List all customer
+
+``GET`` /customer/{id} - Search customer by id
+
+``POST`` /customer - Create a new customer
+
+``PUT`` /customer/{id} - Edit a customer
+
+``DELETE`` /customer/{id} - Delete a customer by id
+
+## ATTENTION
+
+ * Content-type must be application/json

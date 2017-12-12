@@ -30,10 +30,9 @@ First of all: **Dependencies**
 
 **How use this application?**
 
-You will need this apps:
-
  * Postman or other
  * dependencies installed
+ * Please send all data as json in the request body 
  
 **Create a crud from a domain**
 
@@ -74,6 +73,9 @@ This example will create this endpoints
 ``PUT`` /customer/{id} - Edit a customer
 
 ``DELETE`` /customer/{id} - Delete a customer by id
+
+### Supported types of data
+ * string, decimal, float, date and integer
 
 ## ATTENTION
 

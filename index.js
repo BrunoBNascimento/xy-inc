@@ -23,6 +23,10 @@ const app = express();
 
 //app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({type: 'application/json'}));
+app.use(function(req, res, next){
+    res.setHeader('Content-Type', 'application/json');
+    next();
+})
 
 
 // Run and call my array of routes

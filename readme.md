@@ -43,23 +43,26 @@ SEND ``POST`` request to ``http://localhost:8080`` with request body in json lik
 ```json
 {
     "domain":"customer", //REQUIRED
-    "firstName": {
-        "type": "String", //REQUIRED,
-        "required": "Entre com o primeiro nome" //OPTIONAL
-    },
-    "lastName": {
-        "type": "String", //REQUIRED,
-        "required": "Entre com o ultimo nome" //OPTIONAL
-    },
-    "email": {
-        "type": "String"
-    },
-    "company": {
-        "type": "String"
-    },
-    "phone": {
-        "type": "String"
+    "properties":{
+        "firstName": {
+                "type": "String", //REQUIRED,
+                "required": "Entre com o primeiro nome" //OPTIONAL
+            },
+            "lastName": {
+                "type": "String", //REQUIRED,
+                "required": "Entre com o ultimo nome" //OPTIONAL
+            },
+            "email": {
+                "type": "String"
+            },
+            "company": {
+                "type": "String"
+            },
+            "phone": {
+                "type": "String"
+            }
     }
+    
 }
 ```
 This example will create this endpoints

@@ -1,1 +1,77 @@
-[{"domain":"customer","properties":{"firstName":{"type":"String","required":"Entre com o primeiro nome"},"lastName":{"type":"String","required":"Entre com o ultimo nome"}}}]
+[
+  {
+    "domain": "customer",
+    "properties": {
+      "firstName": {
+        "type": "String",
+        "required": "Entre com o primeiro nome"
+      },
+      "lastName": {
+        "type": "String",
+        "required": "Entre com o ultimo nome"
+      }
+    }
+  },
+  {
+    "domain": "establishment",
+    "properties": {
+      "name": {
+        "type": "string",
+        "required": "Entre com o nome"
+      }
+    }
+  },
+  {
+    "domain": "empresa",
+    "properties": {
+      "firstName": {
+        "type": "string",
+        "required": "Entre com o primeiro nome"
+      },
+      "lastName": {
+        "type": "string",
+        "required": "Entre com o ultimo nome"
+      },
+      "email": {
+        "type": "string"
+      },
+      "company": {
+        "type": "string"
+      },
+      "phone": {
+        "type": "string"
+      }
+    }
+  },
+  {
+    "domain": "estudante",
+    "properties": {
+      "firstName": {
+        "type": "string",
+        "required": "Entre com o primeiro nome"
+      },
+      "lastName": {
+        "type": "string",
+        "required": "Entre com o ultimo nome"
+      },
+      "email": {
+        "type": "string"
+      },
+      "company": {
+        "type": "string"
+      },
+      "phone": {
+        "type": "string"
+      }
+    }
+  },
+  {
+    "domain": "escolas",
+    "properties": {
+      "nome": {
+        "type": "string",
+        "required": "E obrigatorio informar um nome"
+      }
+    }
+  }
+]

@@ -46,7 +46,7 @@ for (let i in domains) {
                 // create a schema from domain name
                 ActualSchema = mongoose.model(domains[i].domain, schemas[domains[i].domain]);
 
-                ActualSchema.findOneAndUpdate( { _id: req.params.id }, req.body, { new: true }, (err, resource) =>{
+                ActualSchema.findOneAndUpdate( { _id: req.params.id }, req.body, (err, resource) =>{
                     if(err)
                         res.status(400).send(err)
                     res.send(resource);
